@@ -20,3 +20,4 @@ gem 'haml',               '~> 4.0.7'
 gem 'font-awesome-rails', '~> 4.4.0'
 gem 'bootstrap-sass',     '~> 3.3.5'
 
+gem 'rails_12factor',     '~> 0.0.3', group: :production

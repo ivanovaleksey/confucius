@@ -16,3 +16,6 @@ db/structure.sql
 /tmp
 
 app/assets/javascripts/vendor/
+public/assets/
+
+node_modules/
