@@ -58,5 +58,11 @@ module Confucius
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.assets.initialize_on_precompile = false
+    config.assets.precompile = [ Proc.new{ |path| !File.extname(path).in?(['.js', '.css', '.map', '.gzip', ''] ) }, /(?:\/|\\|\A)application\.(css|js)$/ ]
+    root.join('app', 'assets', 'javascripts', 'vendor').to_s.tap do |bower_path|
+      config.assets.paths << bower_path
+    end
   end
 end

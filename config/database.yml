@@ -17,3 +17,13 @@ test:
   timeout: 5000
   username: confucius
   password:
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: confucius_production
+  pool: 5
+  timeout: 5000
+  username: confucius
+  password:
