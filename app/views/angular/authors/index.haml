@@ -1,0 +1,28 @@
+.page-header
+  %h1.clearfix
+    .pull-left
+      Authors list ({{ total_count }})
+
+    .pull-right
+      %a.btn.btn-default{'href' => '/'}
+        = fa_icon 'home'
+        Back
+
+.page-content{'ng-if' => '!loading'}
+  %div{'ng-if' => 'authors.length'}
+    %table.table.table-hover
+      %thead
+        %tr
+          %th #
+          %th Full name
+          %th Birth date
+      %tbody
+        %tr{'ng-repeat' => 'author in authors'}
+          %td {{ author.id }}
+          %td {{ author.full_name }}
+          %td {{ author.birth_date }}
+
+  %div{'ng-if' => '!authors.length'}
+    %blockquote No authors
+
+.page-content{'ng-if' => 'loading'}= loader_icon
