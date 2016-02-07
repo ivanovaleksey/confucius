@@ -11,6 +11,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jbuilder', '~> 2.1.3'
-
-gem 'faker', '~> 1.5.0'
+gem 'jbuilder',    '~> 2.1.3'
+gem 'faker',       '~> 1.5.0'
+gem 'searchlight', '~> 3.1.1'
+gem 'kaminari',    '~> 0.16.3'
+gem 'draper',      '~> 1.4.0'
